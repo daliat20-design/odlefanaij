@@ -1,0 +1,6 @@
+{
+  "name": "עוֹד לְפָנַיִךְ - תוכנית לנשים 60+",
+  "description": "דף נחיתה מקצועי, אלגנטי ונשי לתוכנית 'עוד לפנייך' לנשים מעל גיל 60 מבית 'בין לבין'",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
