@@ -6,10 +6,10 @@
 import React from 'react';
 import Header from './components/Header.tsx';
 import HeroSection from './components/HeroSection.tsx';
-import AboutSection from './components/AboutSection.tsx';
 import SessionsSection from './components/SessionsSection.tsx';
 import MagicSection from './components/MagicSection.tsx';
 import FoundersSection from './components/FoundersSection.tsx';
+import TestimonialsSection from './components/TestimonialsSection.tsx';
 import ScheduleSection from './components/ScheduleSection.tsx';
 import InquiryFormSection from './components/InquiryFormSection.tsx';
 import Footer from './components/Footer.tsx';
@@ -28,22 +28,22 @@ export default function App() {
       <Header />
 
       <main className="flex-1">
-        {/* Section 1: Hero / פתיחה */}
+        {/* Section 1: פתיחה ומהות התוכנית (עוֹד לְפָנַיִךְ) */}
         <HeroSection onCtaClick={scrollToContact} />
 
-        {/* Section 2: אז מהי בעצם "עוד לפנייך"? */}
-        <AboutSection />
-
-        {/* Section 3: חמישה מפגשים, חמישה עולמות תוכן */}
+        {/* Section 2: חמישה מפגשים, חמישה עולמות תוכן */}
         <SessionsSection onCtaClick={scrollToContact} />
 
         {/* Section 4: מה סוד הקסם? (שילוב החברותא, התמונה, הייחודיות ולוגו בין לבין) */}
         <MagicSection />
 
-        {/* Section 6: נעים להכיר, אנחנו דלית ואלסי */}
+        {/* Section 4: נעים להכיר, אנחנו דלית ואלסי */}
         <FoundersSection />
 
-        {/* Section 7: כל הפרטים שכדאי לדעת (לוח זמנים, מועדים והטבות) */}
+        {/* Section 5: המלצות מסדנאות קודמות */}
+        <TestimonialsSection />
+
+        {/* Section 6: כל הפרטים שכדאי לדעת (לוח זמנים, מועדים והטבות) */}
         <ScheduleSection onCtaClick={scrollToContact} />
 
         {/* Section 8: טופס התעניינות וחיבור לווטסאפ */}

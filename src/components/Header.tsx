@@ -80,6 +80,12 @@ export const Header: React.FC = () => {
             הצוות המוביל
           </button>
           <button
+            onClick={() => scrollToSection('testimonials')}
+            className="hover:text-[#982D49] transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+          >
+            המלצות
+          </button>
+          <button
             onClick={() => scrollToSection('schedule')}
             className="hover:text-[#982D49] transition-colors whitespace-nowrap shrink-0 cursor-pointer"
           >
@@ -141,6 +147,12 @@ export const Header: React.FC = () => {
               className="text-right py-3 px-2 text-lg hover:text-[#982D49] hover:bg-white/50 rounded-xl transition-colors border-b border-[#D68B98]/10 cursor-pointer"
             >
               הצוות המוביל
+            </button>
+            <button
+              onClick={() => scrollToSection('testimonials')}
+              className="text-right py-3 px-2 text-lg hover:text-[#982D49] hover:bg-white/50 rounded-xl transition-colors border-b border-[#D68B98]/10 cursor-pointer"
+            >
+              המלצות
             </button>
             <button
               onClick={() => scrollToSection('schedule')}
