@@ -16,16 +16,36 @@
   html {
     scroll-behavior: smooth;
     font-family: 'Assistant', 'Heebo', system-ui, -apple-system, sans-serif;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-x: hidden;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, .font-display {
     font-family: 'Frank Ruhl Libre', 'Assistant', serif;
+    line-height: 1.35;
+  }
+
+  /* Prevent iOS zoom on input focus while keeping inputs large & comfortable */
+  input, textarea, select {
+    font-size: 16px !important;
+  }
+
+  /* Better tap responsiveness */
+  button, a {
+    -webkit-tap-highlight-color: transparent;
   }
 }
 
 /* Subtle custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 ::-webkit-scrollbar-track {
   background: #F9F1EA;
@@ -37,4 +57,3 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #982D49;
 }
-

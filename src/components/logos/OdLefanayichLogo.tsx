@@ -11,7 +11,7 @@ export const OdLefanayichLogo: React.FC<OdLefanayichLogoProps> = ({
 }) => {
   return (
     <div
-      className={`relative inline-block select-none transition-transform duration-300 hover:scale-[1.01] ${className}`}
+      className={`relative inline-block select-none max-w-full aspect-square transition-transform duration-300 hover:scale-[1.01] ${className}`}
       style={{ width: size, height: size }}
       aria-label="לוגו תוכנית עוד לפנייך (60+) מבית בין לבין"
     >

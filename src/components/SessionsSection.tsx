@@ -71,13 +71,13 @@ export const SessionsSection: React.FC<SessionsSectionProps> = ({ onCtaClick }) 
         </div>
 
         {/* CTA after the 5 sessions */}
-        <div className="mt-14 text-center">
-          <p className="text-lg text-[#476653] font-medium mb-4">
+        <div className="mt-12 sm:mt-14 text-center max-w-md mx-auto">
+          <p className="text-base sm:text-lg text-[#476653] font-medium mb-4">
             רוצה לדעת מתי נפתח המחזור הקרוב?
           </p>
           <button
             onClick={onCtaClick}
-            className="px-9 py-3.5 text-base sm:text-lg font-semibold text-white bg-[#982D49] hover:bg-[#7A2139] active:scale-[0.99] rounded-full shadow-md hover:shadow-lg transition-all cursor-pointer"
+            className="w-full sm:w-auto px-9 py-4 text-base sm:text-lg font-semibold text-white bg-[#982D49] hover:bg-[#7A2139] active:scale-[0.99] rounded-full shadow-md hover:shadow-lg transition-all cursor-pointer min-h-[48px] flex items-center justify-center mx-auto"
           >
             לחצי כאן ונשוחח
           </button>

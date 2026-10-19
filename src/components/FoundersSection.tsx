@@ -32,7 +32,7 @@ export const FoundersSection: React.FC = () => {
                 src="/dalit-and-elsie.png"
                 alt="דלית כורה ואלסי זיסלמן - מייסדות בין לבין"
                 referrerPolicy="no-referrer"
-                className="w-full h-[380px] sm:h-[460px] object-cover object-top"
+                className="w-full h-[300px] sm:h-[400px] md:h-[460px] object-cover object-top"
                 onError={(e) => {
                   const target = e.currentTarget;
                   if (!target.src.includes('postimg.cc')) {

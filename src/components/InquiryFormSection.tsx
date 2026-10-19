@@ -102,18 +102,27 @@ export const InquiryFormSection: React.FC = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Heading */}
-        <div className="text-center max-w-2xl mx-auto mb-10">
+        <div className="text-center max-w-2xl mx-auto mb-10 space-y-4">
           <span className="text-sm font-semibold tracking-wider text-[#F4E2E5]">
-            יצירת קשר והרשמה מוקדמת
+            יצירת קשר
           </span>
-          <h2 className="mt-2 text-3xl sm:text-4xl md:text-5xl font-bold font-display text-white">
-            מסקרן אותך? נשמח להכיר.
+          <h2 className="mt-1 text-3xl sm:text-4xl md:text-5xl font-bold font-display text-white">
+            מסקרן אותך? נשמח להכיר!
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-white/90 leading-relaxed">
-            אנחנו מתכננות את פתיחת המחזור הבא של "עוד לפנייך".
-            <br />
-            התאריך והמיקום יפורסמו בהמשך, אבל כבר עכשיו אפשר להשאיר פרטים, לשמוע עוד על התוכנית ולהיות בין הראשונות שיקבלו עדכון.
-          </p>
+          <div className="space-y-3 text-base sm:text-lg text-white/90 leading-relaxed font-normal">
+            <p>
+              לא צריך להגיע עם שאלה גדולה או עם תוכנית לשנות את החיים. לפעמים מספיק קצת סקרנות, רצון לחוות משהו חדש ולהכיר נשים שעוד לא פגשת.
+            </p>
+            <p className="font-medium text-[#FAF0F2]">
+              רוצה לשמוע עוד ולהתעדכן לפני כולן ? השאירי פרטים ונחזור אלייך באופן אישי.
+            </p>
+          </div>
+
+          {/* Happy Hour Bonus Reminder */}
+          <div className="inline-block mt-2 p-3.5 sm:p-4 bg-white/15 backdrop-blur-xs rounded-2xl border border-white/30 text-white shadow-sm text-sm sm:text-base font-medium">
+            <span className="font-bold text-[#FFFCF8]">מזכירות לך: </span>
+            <span>לנרשמות עד 30.11 מחכה מפגש בונוס במתנה במסגרת הטבת Happy Hour!</span>
+          </div>
         </div>
 
         {/* Lead Capture Form Card */}
@@ -284,10 +293,10 @@ export const InquiryFormSection: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-3.5 px-6 text-base font-bold text-white bg-[#982D49] hover:bg-[#7A2139] active:scale-[0.99] rounded-2xl shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-70"
+                  className="w-full py-4 px-6 text-base sm:text-lg font-bold text-white bg-[#982D49] hover:bg-[#7A2139] active:scale-[0.99] rounded-2xl shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-70 min-h-[50px]"
                 >
                   <Send size={18} className="rotate-180" />
-                  <span>{isSubmitting ? 'שומרת פרטים...' : 'אני רוצה לשמוע עוד'}</span>
+                  <span>{isSubmitting ? 'שומרת פרטים...' : 'גם אני רוצה לגלות מה עוד לפניי'}</span>
                 </button>
               </div>
 

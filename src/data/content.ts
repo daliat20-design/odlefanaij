@@ -39,15 +39,30 @@ export const SESSIONS_DATA: SessionItem[] = [
 ];
 
 export const PROGRAM_DETAILS = {
-  openingDate: 'נובמבר 2026',
-  specificDate: 'יפורסם בהמשך',
-  totalSessions: '5 מפגשים',
-  frequency: 'מפגש אחד בשבוע',
-  sessionDuration: 'כשעתיים וחצי עד שלוש שעות',
-  location: 'יפורסם בהמשך',
-  groupSize: 'קבוצה אינטימית ואיכותית (מספר מקומות מוגבל)',
-  pricing: 'יפורסם בהמשך',
-  expertSpeakers: 'נשות מקצוע מובילות בתחומן יפורסמו בהמשך',
+  openingDate: 'דצמבר 2026',
+  openingDetails: 'המחזור הבא של "עוד לפנייך" מתוכנן לדצמבר 2026. התאריכים המדויקים יפורסמו בקרוב.',
+  location: 'כפר סבא',
+  locationDetails: 'בכפר סבא. המיקום המדויק יפורסם בהמשך.',
+  sessionsCount: '5 מפגשים',
+  sessionsDetails: '5 מפגשים, אחת לשבוע, בני שעתיים וחצי עד שלוש שעות כל אחד.',
+  pricePerSession: '150 ₪ למפגש',
+  totalPrice: '750 ₪ לסדרה המלאה',
+  pricingDetails: '150 ₪ למפגש, סה"כ 750 ₪ לסדרה המלאה.',
+  registrationNote: 'ההרשמה היא לכל חמשת המפגשים, כדי לאפשר היכרות, אינטימיות ופתיחות בקבוצה, וליצור תהליך משותף שנבנה ממפגש למפגש.',
+  benefits: [
+    {
+      title: 'הטבת Happy Hour לרגל חודש ההוקרה לאזרחים ותיקים',
+      description: 'לנרשמות עד 30.11.2026 מחכה מפגש בונוס במתנה ללא עלות !',
+      badge: 'מפגש בונוס במתנה',
+      highlightDate: 'עד 30.11.2026',
+    },
+    {
+      title: 'חברה מביאה חברה',
+      description: 'כי חוויות טובות כיף לחלוק! נרשמות יחד עם חברה? שתיכן נהנות מהנחה של 5% ממחיר הסדרה.',
+      badge: '5% הנחה לשתיכן',
+    },
+  ],
+  limitedSpots: 'מספר המקומות מוגבל, כדי לשמור על האווירה האינטימית והאישית שמאפיינת את המפגשים.',
 };
 
 export const CONTACT_WHATSAPP = {

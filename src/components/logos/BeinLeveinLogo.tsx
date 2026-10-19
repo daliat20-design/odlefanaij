@@ -12,7 +12,7 @@ export const BeinLeveinLogo: React.FC<BeinLeveinLogoProps> = ({
 }) => {
   return (
     <div
-      className={`relative inline-block select-none transition-transform duration-300 hover:scale-[1.02] ${className}`}
+      className={`relative inline-block select-none max-w-full aspect-square transition-transform duration-300 hover:scale-[1.02] ${className}`}
       style={{ width: size, height: size }}
       aria-label="לוגו בין לבין - מרחבים לנשים"
     >

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import BeinLeveinLogo from './logos/BeinLeveinLogo.tsx';
+import OdLefanayichLogo from './logos/OdLefanayichLogo.tsx';
 import { InquiryLead } from '../types/index.ts';
 import { Download, Copy, Check, Users, Shield, ArrowUp, ExternalLink } from 'lucide-react';
 
@@ -74,18 +75,18 @@ export const Footer: React.FC = () => {
     <footer className="bg-[#FAF1F3] text-[#2C2422] pt-16 pb-12 border-t-2 border-[#D68B98]/40">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Main Footer Row */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-center pb-12 border-b border-[#D68B98]/25">
+        {/* Main Footer Row: Bein Levein on the right, Program & Brand in center, Od Lefanayich on the left */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-10 items-center pb-12 border-b border-[#D68B98]/25">
           
-          {/* Bein Levein Emblem (3 cols) */}
-          <div className="md:col-span-3 flex justify-center md:justify-start">
-            <div className="p-3 bg-white rounded-3xl border border-[#D68B98]/30 shadow-xs inline-block">
+          {/* Right Column: Bein Levein Logo (צד ימין ב-RTL) */}
+          <div className="md:col-span-3 flex justify-center md:justify-start order-1">
+            <div className="p-3 bg-white rounded-3xl border border-[#D68B98]/30 shadow-xs inline-flex items-center justify-center">
               <BeinLeveinLogo size={140} showSubtitle={true} />
             </div>
           </div>
 
-          {/* Program & House Brand Copy (6 cols) */}
-          <div className="md:col-span-6 text-center md:text-right space-y-3">
+          {/* Center Column: Program & House Brand Copy + Quick Actions (במרכז) */}
+          <div className="md:col-span-6 text-center space-y-3.5 order-2">
             <h3 className="text-2xl font-bold font-display text-[#982D49] tracking-wide">
               עוֹד לְפָנַיִךְ | תוכנית לנשים 60+
             </h3>
@@ -95,7 +96,9 @@ export const Footer: React.FC = () => {
             <p className="text-sm text-[#2C2422]/75 font-normal italic">
               "כי בכל שלב בחיים יש עוד מה לגלות."
             </p>
-            <div className="pt-2">
+
+            {/* Actions Bar: Website link & Scroll Up */}
+            <div className="pt-2 flex flex-wrap items-center justify-center gap-2.5 sm:gap-3">
               <a
                 href={BEIN_LEVEIN_HOME_URL}
                 target="_blank"
@@ -105,30 +108,36 @@ export const Footer: React.FC = () => {
                 <span>לאתר הבית של "בין לבין"</span>
                 <ExternalLink size={13} />
               </a>
+
+              <button
+                onClick={scrollToTop}
+                className="inline-flex items-center gap-1.5 px-4 py-2 bg-white hover:bg-[#F9F1EA] text-xs font-semibold text-[#476653] border border-[#476653]/20 rounded-full transition-colors cursor-pointer shadow-2xs"
+              >
+                <span>חזרה לראש הדף</span>
+                <ArrowUp size={13} />
+              </button>
+            </div>
+
+            {/* Admin Lead Manager Link */}
+            <div className="pt-1">
+              <button
+                onClick={() => {
+                  loadLeads();
+                  setShowAdminModal(true);
+                }}
+                className="inline-flex items-center gap-1.5 text-xs text-[#982D49] hover:underline transition-colors cursor-pointer"
+              >
+                <Users size={13} />
+                <span>ניהול פניות מתעניינות ({leads.length})</span>
+              </button>
             </div>
           </div>
 
-          {/* Quick Actions & Scroll Up (3 cols) */}
-          <div className="md:col-span-3 flex flex-col items-center md:items-end gap-3">
-            <button
-              onClick={scrollToTop}
-              className="inline-flex items-center gap-2 px-4 py-2 bg-white hover:bg-[#F9F1EA] text-xs font-semibold text-[#476653] border border-[#476653]/20 rounded-full transition-colors cursor-pointer shadow-2xs"
-            >
-              <span>חזרה לראש הדף</span>
-              <ArrowUp size={14} />
-            </button>
-
-            {/* Admin Lead Manager Link */}
-            <button
-              onClick={() => {
-                loadLeads();
-                setShowAdminModal(true);
-              }}
-              className="inline-flex items-center gap-1.5 text-xs text-[#982D49] hover:underline transition-colors cursor-pointer mt-1"
-            >
-              <Users size={14} />
-              <span>ניהול פניות מתעניינות ({leads.length})</span>
-            </button>
+          {/* Left Column: Od Lefanayich Logo (צד שמאל ב-RTL) */}
+          <div className="md:col-span-3 flex justify-center md:justify-end order-3">
+            <div className="p-3 bg-white rounded-3xl border border-[#D68B98]/30 shadow-xs inline-flex items-center justify-center">
+              <OdLefanayichLogo size={140} />
+            </div>
           </div>
 
         </div>
