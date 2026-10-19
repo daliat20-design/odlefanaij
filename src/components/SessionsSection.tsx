@@ -61,9 +61,8 @@ export const SessionsSection: React.FC<SessionsSectionProps> = ({ onCtaClick }) 
                 </div>
 
                 {/* Subtle bottom decorative accent */}
-                <div className="pt-6 mt-6 border-t border-[#D68B98]/20 flex items-center justify-between text-xs font-medium text-[#476653]">
+                <div className="pt-5 mt-5 border-t border-[#D68B98]/20 flex items-center text-xs font-medium text-[#476653]">
                   <span>ידע מקצועי · שיח פתוח</span>
-                  <span className="text-[#982D49]">לפרטים נוספים ↓</span>
                 </div>
               </div>
             );

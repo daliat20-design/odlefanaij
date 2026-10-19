@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import ShareButton from './ShareButton.tsx';
 
 export const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -76,7 +77,7 @@ export const Header: React.FC = () => {
             onClick={() => scrollToSection('founders')}
             className="hover:text-[#982D49] transition-colors whitespace-nowrap shrink-0 cursor-pointer"
           >
-            דלית ואלסי
+            הצוות המוביל
           </button>
           <button
             onClick={() => scrollToSection('schedule')}
@@ -86,8 +87,15 @@ export const Header: React.FC = () => {
           </button>
         </nav>
 
-        {/* Zone 3: 1 Primary Action + Mobile Toggle */}
+        {/* Zone 3: Primary Action + Share Button + Mobile Toggle */}
         <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+          <ShareButton
+            variant="outline"
+            text="שתפי חברה"
+            size="sm"
+            className="hidden md:inline-flex"
+          />
+
           <button
             onClick={() => scrollToSection('contact')}
             className="px-3.5 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold text-white bg-[#982D49] hover:bg-[#7A2139] active:scale-[0.98] rounded-full shadow-sm hover:shadow transition-all whitespace-nowrap cursor-pointer min-h-[40px] flex items-center justify-center"
@@ -132,7 +140,7 @@ export const Header: React.FC = () => {
               onClick={() => scrollToSection('founders')}
               className="text-right py-3 px-2 text-lg hover:text-[#982D49] hover:bg-white/50 rounded-xl transition-colors border-b border-[#D68B98]/10 cursor-pointer"
             >
-              דלית ואלסי
+              הצוות המוביל
             </button>
             <button
               onClick={() => scrollToSection('schedule')}
@@ -141,13 +149,20 @@ export const Header: React.FC = () => {
               פרטי התוכנית
             </button>
             
-            <div className="pt-4 mt-2">
+            <div className="pt-4 mt-2 space-y-2.5">
               <button
                 onClick={() => scrollToSection('contact')}
                 className="w-full py-3.5 bg-[#982D49] text-white rounded-full font-bold text-center shadow-md text-base"
               >
                 השאירי פרטים ונחזור אלייך
               </button>
+
+              <ShareButton
+                variant="secondary"
+                text="שתפי חברה בווטסאפ"
+                size="md"
+                className="w-full justify-center"
+              />
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import OdLefanayichLogo from './logos/OdLefanayichLogo.tsx';
+import ShareButton from './ShareButton.tsx';
 
 interface HeroSectionProps {
   onCtaClick: () => void;
@@ -40,18 +41,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onCtaClick }) => {
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-[#982D49] font-display leading-[1.25] tracking-tight text-balance">
-              עברת לא מעט בחיים
-              <span className="block mt-1 sm:mt-2 text-[#2C2422]">
-                ומה עוד לפנייך?
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.1rem] font-bold text-[#982D49] font-display leading-[1.25] tracking-tight text-balance">
+              את כבר יודעת דבר או שניים על החיים...
+              <span className="block mt-1.5 sm:mt-2 text-[#2C2422]">
+                סקרנית לגלות מה עוד לפנייך?
               </span>
             </h1>
 
             {/* Staggered Prose Presentation */}
             <div className="space-y-3.5 sm:space-y-4 text-base sm:text-lg text-[#2C2422]/90 leading-relaxed font-normal">
-              <p>
-                יש גיל שבו את יודעת דבר או שניים על החיים
-              </p>
               <p>
                 צברת ניסיון, התמודדת, גידלת, בנית, שינית, בחרת. יש דברים שאת כבר מכירה היטב, ויש כאלה שדווקא עכשיו מעוררים שאלות חדשות.
               </p>
@@ -64,23 +62,32 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onCtaClick }) => {
             </div>
 
             {/* Highlighted Closing Sentence */}
-            <div className="p-4 sm:p-6 bg-[#FAF1F3] rounded-2xl border border-[#D68B98]/30 shadow-xs">
+            <div className="p-4 sm:p-6 bg-[#FAF1F3] rounded-2xl border border-[#D68B98]/30 shadow-xs text-center">
               <p className="text-lg sm:text-xl md:text-2xl font-bold text-[#982D49] font-display leading-snug">
-                כי יש כל כך הרבה מאחורייך. אבל יש גם עוד הרבה לפנייך.
+                כי יש כל כך הרבה מאחורייך.
+                <span className="block mt-1 sm:mt-1.5 text-[#982D49]">
+                  אבל יש גם עוד הרבה לפנייך.
+                </span>
               </p>
             </div>
 
-            {/* Clear, Prominent CTA Button */}
-            <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+            {/* Clear, Prominent CTA Button Group */}
+            <div className="pt-2 flex flex-wrap items-stretch sm:items-center gap-3 sm:gap-4">
               <button
                 onClick={onCtaClick}
                 className="w-full sm:w-auto px-8 py-3.5 sm:py-4 text-base sm:text-lg font-semibold text-white bg-[#982D49] hover:bg-[#7A2139] active:scale-[0.99] rounded-full shadow-md hover:shadow-lg transition-all text-center cursor-pointer min-h-[48px] flex items-center justify-center"
               >
                 מעניין אותי לשמוע עוד
               </button>
+              <ShareButton
+                variant="outline"
+                text="שתפי חברה"
+                size="md"
+                className="w-full sm:w-auto min-h-[48px] px-6"
+              />
               <a
                 href="#sessions"
-                className="w-full sm:w-auto px-6 py-3 text-sm sm:text-base font-medium text-[#476653] hover:text-[#982D49] hover:bg-white/60 rounded-full transition-all text-center min-h-[44px] flex items-center justify-center"
+                className="w-full sm:w-auto px-5 py-3 text-sm sm:text-base font-medium text-[#476653] hover:text-[#982D49] hover:bg-white/60 rounded-full transition-all text-center min-h-[44px] flex items-center justify-center"
               >
                 לגלות את נושאי המפגשים ↓
               </a>

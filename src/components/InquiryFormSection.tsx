@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Send, CheckCircle2, MessageCircle, AlertCircle, Lock } from 'lucide-react';
 import { InquiryLead } from '../types/index.ts';
 import { CONTACT_WHATSAPP } from '../data/content.ts';
+import ShareButton from './ShareButton.tsx';
 
 const LEADS_STORAGE_KEY = 'od_lefanayich_inquiries';
 
@@ -111,17 +112,16 @@ export const InquiryFormSection: React.FC = () => {
           </h2>
           <div className="space-y-3 text-base sm:text-lg text-white/90 leading-relaxed font-normal">
             <p>
-              לא צריך להגיע עם שאלה גדולה או עם תוכנית לשנות את החיים. לפעמים מספיק קצת סקרנות, רצון לחוות משהו חדש ולהכיר נשים שעוד לא פגשת.
+              לא צריך להגיע עם שאלת שינוי גדולה. מספיק קצת סקרנות, רצון לחוות משהו חדש ולהכיר נשים נוספות.
             </p>
-            <p className="font-medium text-[#FAF0F2]">
-              רוצה לשמוע עוד ולהתעדכן לפני כולן ? השאירי פרטים ונחזור אלייך באופן אישי.
+            <p className="font-bold text-white text-lg sm:text-xl">
+              רוצה לשמוע עוד ולהתעדכן לפני כולן? השאירי פרטים ונחזור אלייך אישית.
             </p>
           </div>
 
           {/* Happy Hour Bonus Reminder */}
-          <div className="inline-block mt-2 p-3.5 sm:p-4 bg-white/15 backdrop-blur-xs rounded-2xl border border-white/30 text-white shadow-sm text-sm sm:text-base font-medium">
-            <span className="font-bold text-[#FFFCF8]">מזכירות לך: </span>
-            <span>לנרשמות עד 30.11 מחכה מפגש בונוס במתנה במסגרת הטבת Happy Hour!</span>
+          <div className="inline-block mt-3 p-3.5 sm:p-4 bg-white/15 backdrop-blur-xs rounded-2xl border border-white/30 text-white shadow-sm text-sm sm:text-base font-bold">
+            <span>הטבת Happy Hour: לנרשמות עד 30.11 מפגש בונוס במתנה!</span>
           </div>
         </div>
 
@@ -140,6 +140,18 @@ export const InquiryFormSection: React.FC = () => {
                 פרטייך נשמרו בהצלחה במערכת. נחזור אלייך בהקדם באהבה עם כל הפרטים לקראת פתיחת המחזור הבא של "עוד לפנייך".
               </p>
               
+              <div className="pt-2 p-4 bg-[#FAF1F3] rounded-2xl border border-[#D68B98]/30 max-w-md mx-auto space-y-2 text-center">
+                <p className="text-sm font-bold text-[#982D49]">
+                  רוצה לבוא עם חברה וליהנות מ־5% הנחה לשתיכן?
+                </p>
+                <ShareButton
+                  variant="primary"
+                  text="שתפי חברה בווטסאפ"
+                  size="md"
+                  className="w-full justify-center"
+                />
+              </div>
+
               <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
                 <a
                   href={dalitWhatsAppUrl}
@@ -335,6 +347,15 @@ export const InquiryFormSection: React.FC = () => {
               <MessageCircle size={19} className="text-[#25D366]" />
               <span>שיחה עם אלסי בווטסאפ</span>
             </a>
+          </div>
+
+          <div className="pt-3 flex justify-center">
+            <ShareButton
+              variant="pill"
+              text="שתפי חברה בתוכנית עוד לפנייך"
+              size="md"
+              className="shadow-sm hover:shadow"
+            />
           </div>
         </div>
 

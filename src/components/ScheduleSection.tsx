@@ -1,6 +1,7 @@
 import React from 'react';
 import { Calendar, MapPin, Clock, CreditCard, Sparkles, Gift, Users2, AlertCircle } from 'lucide-react';
 import { PROGRAM_DETAILS } from '../data/content.ts';
+import ShareButton from './ShareButton.tsx';
 
 interface ScheduleSectionProps {
   onCtaClick: () => void;
@@ -154,7 +155,7 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onCtaClick }) 
             </div>
 
             {/* Benefit 2: חברה מביאה חברה */}
-            <div className="p-5 sm:p-6 rounded-2xl bg-[#F2F6F3] border border-[#476653]/30 flex flex-col justify-between space-y-3">
+            <div className="p-5 sm:p-6 rounded-2xl bg-[#F2F6F3] border border-[#476653]/30 flex flex-col justify-between space-y-4">
               <div>
                 <div className="flex items-center justify-between gap-2 mb-2">
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-[#476653] text-white">
@@ -169,6 +170,15 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onCtaClick }) 
                 <p className="text-base text-[#2C2422]/90 leading-relaxed mt-2">
                   כי חוויות טובות כיף לחלוק! נרשמות יחד עם חברה? <strong className="text-[#476653] font-bold">שתיכן נהנות מהנחה של 5%</strong> ממחיר הסדרה.
                 </p>
+              </div>
+
+              <div className="pt-2">
+                <ShareButton
+                  variant="secondary"
+                  text="שתפי חברה בווטסאפ"
+                  size="md"
+                  className="w-full justify-center shadow-xs"
+                />
               </div>
             </div>
 

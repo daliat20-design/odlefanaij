@@ -18,56 +18,62 @@ export const MagicSection: React.FC = () => {
         </div>
 
         {/* Narrative Flow */}
-        <div className="space-y-8 text-right">
+        <div className="space-y-8 text-right max-w-3xl mx-auto">
           
           {/* First Text Block */}
-          <div className="bg-white/90 rounded-3xl p-6 sm:p-8 md:p-10 border border-[#476653]/20 shadow-xs">
-            <p className="text-lg sm:text-xl md:text-2xl font-medium text-[#2C2422] leading-relaxed">
-              אנחנו מאמינות שתוכן טוב הוא רק חלק מהחוויה. הקסם האמיתי נוצר במפגש שבין הידע והכלים שאנחנו מביאות, לבין הניסיון, הסיפורים וחוכמת החיים שכל אישה מביאה איתה.
+          <div className="bg-white/95 rounded-3xl p-6 sm:p-8 md:p-10 border border-[#476653]/20 shadow-xs">
+            <p className="text-lg sm:text-xl md:text-2xl font-bold text-[#982D49] font-display leading-relaxed">
+              בבין לבין אנחנו מאמינות שתוכן טוב הוא רק חלק מהחוויה. הקסם נוצר במפגש בין הידע והכלים שאנחנו מביאות לבין הניסיון וחוכמת החיים של כל משתתפת.
             </p>
           </div>
 
           {/* Women Circle Image */}
-          <div className="relative rounded-3xl overflow-hidden shadow-sm border-2 border-white/90 bg-white group max-w-3xl mx-auto">
-            <img
-              src="/sisterhood-circle.png"
-              alt="מעגל נשים חם ומחבק בסלון"
-              referrerPolicy="no-referrer"
-              className="w-full h-[280px] sm:h-[380px] md:h-[460px] object-cover group-hover:scale-[1.01] transition-transform duration-500"
-              onError={(e) => {
-                const target = e.currentTarget;
-                if (!target.src.includes('postimg.cc')) {
-                  target.src = "https://i.postimg.cc/prf0zkZS/m'gl-nsym-hm-wmhbq-bslwn.png";
-                }
-              }}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#2C2422]/50 via-transparent to-transparent flex items-end p-5 sm:p-6">
-              <p className="text-white text-sm sm:text-base font-medium">
-                מרחב נשי של הקשבה, שיתוף וצחוק משותף
-              </p>
+          <div className="space-y-3">
+            <div className="relative rounded-3xl overflow-hidden shadow-sm border-2 border-white/90 bg-white group max-w-3xl mx-auto">
+              <img
+                src="/sisterhood-circle.png"
+                alt="מעגל נשים חם ומחבק בסלון"
+                referrerPolicy="no-referrer"
+                className="w-full h-[280px] sm:h-[380px] md:h-[460px] object-cover group-hover:scale-[1.01] transition-transform duration-500"
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (!target.src.includes('postimg.cc')) {
+                    target.src = "https://i.postimg.cc/prf0zkZS/m'gl-nsym-hm-wmhbq-bslwn.png";
+                  }
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#2C2422]/60 via-transparent to-transparent flex items-end p-5 sm:p-6">
+                <p className="text-white text-base sm:text-lg md:text-xl font-bold">
+                  מרחב נשי של הקשבה, שיתוף וצחוק משותף
+                </p>
+              </div>
             </div>
+            <p className="text-center text-sm font-semibold text-[#476653]">
+              מרחב נשי של הקשבה, שיתוף וצחוק משותף
+            </p>
           </div>
 
-          {/* Second Text Block: How the conversations open up */}
-          <div className="bg-white/90 rounded-3xl p-6 sm:p-8 md:p-10 border border-[#476653]/20 shadow-xs space-y-4">
+          {/* Second Text Block: Authentic Connections & Principles */}
+          <div className="bg-white/95 rounded-3xl p-6 sm:p-8 md:p-10 border border-[#476653]/20 shadow-xs space-y-5">
             <p className="text-base sm:text-lg md:text-xl text-[#2C2422]/90 leading-relaxed font-normal">
-              בהתחלה מגיעות נשים שלא בהכרח מכירות זו את זו. כל אחת עם הסיפור שלה, הניסיון שצברה והדברים שמעסיקים אותה. לאט לאט השיחות נפתחות. מישהי משתפת במשהו שנוגע באחרות, מישהי מביאה זווית שלא חשבנו עליה. לפעמים נולדת תובנה, לפעמים פשוט צוחקות יחד.
+              נשים שלא בהכרח מכירות זו את זו נפגשות, השיחות נפתחות, הסיפורים מתחברים. לפעמים נולדת תובנה, לפעמים פשוט צוחקות יחד.
             </p>
 
-            <div className="pt-4 border-t border-[#476653]/15 space-y-3">
-              <p className="text-xl sm:text-2xl font-bold text-[#982D49] font-display">
-                וזו בדיוק הייחודיות של בין לבין.
-              </p>
+            <div className="pt-4 border-t border-[#476653]/15 space-y-4">
               <p className="text-base sm:text-lg text-[#2C2422]/90 leading-relaxed">
-                אנחנו לא באות ללמד אותך איך נכון לחיות את חייך.
+                <strong className="text-xl sm:text-2xl font-bold text-[#982D49] font-display block mb-1">
+                  וזו הייחודיות של בין לבין.
+                </strong>
+                אנחנו לא באות ללמד אותך איך לחיות את חייך, אלא להביא ידע, לפתוח שאלות, להציע נקודות מבט חדשות ולתת מקום לחוכמה שכל אחת מביאה איתה.
               </p>
-              <p className="text-base sm:text-lg text-[#2C2422]/90 leading-relaxed">
-                אנחנו מביאות ידע, פותחות שאלות ומזמינות להתבונן מזוויות חדשות, אבל לא פחות חשוב לנו לתת מקום לחוכמת החיים שכל אחת מביאה איתה.
-              </p>
-              <p className="text-base sm:text-lg text-[#476653] font-medium leading-relaxed">
-                כך, לצד התוכן המקצועי, מתפתחת גם חברותא נשית. מרחב שבו אפשר להקשיב, לשתף, ללמוד זו מזו ולהרגיש חלק.
-              </p>
-              <p className="text-base sm:text-lg font-semibold text-[#982D49] pt-1">
+
+              <div className="p-4 sm:p-5 bg-[#FAF1F3] rounded-2xl border border-[#D68B98]/30">
+                <p className="text-base sm:text-lg text-[#982D49] font-bold leading-relaxed">
+                  כך, לצד התוכן המקצועי, נרקמת חברותא נשית. מרחב להקשיב, לשתף, ללמוד זו מזו ולהרגיש חלק.
+                </p>
+              </div>
+
+              <p className="text-base sm:text-lg font-bold text-[#476653] pt-1">
                 ומי יודע? אולי גם להרוויח חברות חדשות להמשך הדרך.
               </p>
             </div>
@@ -75,16 +81,9 @@ export const MagicSection: React.FC = () => {
 
           {/* Bein Levein Logo Representation */}
           <div className="flex flex-col items-center justify-center py-2 text-center">
-            <div className="bg-white/90 p-5 sm:p-7 rounded-3xl border border-[#D68B98]/30 shadow-xs max-w-[260px] sm:max-w-[300px] mx-auto flex items-center justify-center">
+            <div className="bg-white/95 p-5 sm:p-7 rounded-3xl border border-[#D68B98]/30 shadow-xs max-w-[260px] sm:max-w-[300px] mx-auto flex items-center justify-center">
               <BeinLeveinLogo size={220} className="mx-auto" />
             </div>
-          </div>
-
-          {/* Central Highlighted Quote */}
-          <div className="p-6 sm:p-8 bg-white rounded-3xl border-r-4 border-r-[#982D49] border border-[#D68B98]/35 shadow-xs text-center max-w-3xl mx-auto">
-            <p className="text-lg sm:text-xl md:text-2xl font-bold text-[#982D49] font-display leading-snug">
-              "כי לפעמים הדבר הכי משמעותי שאת לוקחת ממפגש הוא דווקא משהו שלא היה כתוב בתוכנית."
-            </p>
           </div>
 
         </div>
